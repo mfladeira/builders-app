@@ -1,0 +1,26 @@
+<div class="containerLogin">
+    <div class="containerForm">
+        <mat-card>
+            <mat-card-content>
+                <h3 class="title">Login</h3>
+                <form class="form">
+                    <mat-form-field>
+                        <mat-label>E-mail</mat-label>
+                        <input matInput [formControl]="emailFormControl" placehoslder="Ex. email@email.com">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Senha</mat-label>
+                        <input matInput [formControl]="passwordFormControl" type="password">
+                    </mat-form-field>
+                    <button mat-raised-button color="primary" class="btnLogin" type="button" (click)="login()"
+                        role="button">
+                        Entrar
+                    </button>
+                    <mat-error *ngIf="formError">
+                        Não foi possível encontrar sua conta
+                    </mat-error>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

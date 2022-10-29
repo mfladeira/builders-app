@@ -1,0 +1,28 @@
+.containerLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(171, 170, 200);
+    background: linear-gradient(90deg, rgba(171, 170, 200, 1) 7%, rgb(114, 150, 175) 100%);
+
+    .containerForm {
+        width: 550px;
+
+        .title {
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .btnLogin {
+            align-self: flex-end;
+            width: 80px;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

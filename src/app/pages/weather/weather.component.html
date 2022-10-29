@@ -1,0 +1,25 @@
+<div class="weather">
+    <button mat-fab color="primary" class="btnExit" (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>
+    </button>
+    <mat-card class="containerWeather">
+        <mat-card-content class="contentCard">
+            <p class="currentWeather">{{capitalizeWord(this.currentWeather)}}</p>
+            <h1 class="temperature">{{this.temperature.toFixed(1)}}° C</h1>
+            <p class="location">{{this.locationName}} - {{this.country}}</p>
+        </mat-card-content>
+    </mat-card>
+
+    <div class="containerInputWeather">
+        <mat-card>
+            <mat-form-field>
+                <mat-label>Endereço</mat-label>
+                <input matInput [formControl]="locationFormControl" placehoslder="Ex. Sapucaia">
+            </mat-form-field>
+            <button mat-raised-button color="primary" class="btnLogin" type="button" role="button"
+                (click)="getCoordinatesByLocationName()">
+                Pesquisar novo endereço
+            </button>
+        </mat-card>
+    </div>
+</div>
